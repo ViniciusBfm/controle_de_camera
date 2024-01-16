@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../image/camera.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.forms{
+    width: 80%;
+    max-width: 400px;
+    height: 50%;
+    padding: 2%;
+    border: 1px solid gray;
+    background-color: rgba(255, 255, 255, 0.3); /* Cor de fundo com transparência para o efeito de vidro */
+    backdrop-filter: blur(5px); /* Aplica o efeito de desfoque */
+    border-radius: 8px;
+    -webkit-box-shadow: 6px 6px 15px -6px rgba(0,0,0,0.71); 
+    box-shadow: 6px 6px 15px -6px rgba(0,0,0,0.71);
+    font-family: 'Open Sans', sans-serif;
+
+}
+.forms h1, .forms input[type=submit]{
+    font-family: 'Signika Negative', sans-serif;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+}
+form input[type=text], input[type=password]{
+    padding-left: 8px;
+    font-size: 16px;
+}
+form input{
+    width: 100%;
+    height: 38px;
+    border-radius: 8px;
+    border: 0;
+    outline: 0;
+}
+form input[type=submit], .input-redefinir input[type=submit]{
+    cursor: pointer;
+    background-color: #4e73df;
+    color: white;
+    font-size: 18px;
+    height: 40px;
+    border: 1px solid #4e73df;
+    font-family: 'Signika Negative', sans-serif;
+}
+form input[type=submit]:hover, .close:hover, .input-redefinir input[type=submit]:hover{
+    background-color: #3e5aaf;
+}
+span{
+    font-size: 12px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-size: 14px;
+}
+.redefinir-box{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.568);
+    position: absolute;
+    display: none;
+}
+.redefinir{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 85%;
+    max-width: 590px;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    border: 1px solid gray;
+    background-color: rgba(255, 255, 255, 0.822); /* Cor de fundo com transparência para o efeito de vidro */
+    backdrop-filter: blur(5px); /* Aplica o efeito de desfoque */
+    border-radius: 8px;
+    -webkit-box-shadow: 6px 6px 15px -6px rgba(0,0,0,0.71); 
+    box-shadow: 6px 6px 15px -6px rgba(0,0,0,0.71);
+}
+.close{
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    border: 1px solid #881919;
+    background-color: #B22222;
+    border-radius: 50%;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px 11px;
+    cursor: pointer;
+}
+.input-redefinir{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.input-redefinir h3{
+    font-family: 'Righteous', sans-serif;
+    font-size: 21px;
+}
+.input-redefinir p{
+    font-family: 'Open Sans', sans-serif;
+}
+.input-redefinir input{
+    width: 100%;
+    height: 38px;
+    outline: 0;
+    border-radius: 5px;
+    font-size: 17px;
+    border: 0;
+}
+.input-redefinir input[type=email]{
+    padding-left: 8px;
+}
+.input-redefinir input[type=submit]{
+    width: 50%;
+    margin: 0px auto;
+    cursor: pointer;
+    font-family: 'Righteous', sans-serif;
+}

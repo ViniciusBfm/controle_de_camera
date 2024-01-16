@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link href="../static/css/login.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0"/>
+    <title>Câmeras - Login</title>   
+    <link rel="shortcut icon" type="image-x/png" href="../static/image/icone.ico">
+</head>
+<body>
+    <section class="forms">
+        <form action="/login" method="post">
+            <h1>Login</h1>
+            <input type="text" name="usuario" id="usuario" placeholder="Usuário" required>            
+            <input type="password" name="senha" id="senha" placeholder="Senha" required>         
+            <input type="submit" id="btn_login" value="Login">
+            <span name="verificacao">{{mensagem}}</span>
+            <a id="esqueceuSenha" href="#">Esqueceu a senha?</a>
+        </form>
+    </section>
+    <section class="redefinir-box" id="redefinir-box">
+        <div class="redefinir">
+            <p class="close" id="close">X</p>
+            <div class="input-redefinir">
+                <h3>Esqueceu a senha?</h3>
+                <p>Digite seu endereço de e-mail e enviaremos a sua senha de acesso.</p>
+                <div>
+                    <p style="margin-bottom: 10px;">Insira seu e-mail:</p>
+                    <input type="email" name="redefinirsenha" id="" placeholder="E-mail">
+                </div>
+                <input type="submit" value="Enviar senha">
+            </div>
+        </div>
+    </section>
+    <script>
+        document.getElementById('esqueceuSenha').addEventListener("click", (e)=>{
+            e.preventDefault()
+            document.getElementById('redefinir-box').style.display="block"
+        })
+        document.getElementById('close').addEventListener("click", (e)=>{
+            e.preventDefault()
+            document.getElementById("redefinir-box").style.display="none"
+        })
+    </script>
+
+    
+</body>
+</html>
